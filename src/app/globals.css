@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+
+.scrollbar-hide {
+    scrollbar-width: none;
+}
+
+@layer components {
+    .custom-padding {
+        @apply px-4 md:px-4 lg:px-16 xl:px-32 2xl:px-64;
+    }
+}

@@ -7,22 +7,22 @@ import { Footer } from "./components/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "NextBuy",
-  description: "A complete e-commerce application with Next.js and Wix",
+    title: process.env.NEXT_PUBLIC_TITLE,
+    description: "A complete e-commerce application with Next.js and Wix",
 };
 
 export default function RootLayout({
-  children,
+    children,
 }: Readonly<{
-  children: React.ReactNode;
+    children: React.ReactNode;
 }>) {
-  return (
-    <html lang="en">
-      <body className={inter.className}>
-        <NavBar />
-        {children}
-        <Footer />
-      </body>
-    </html>
-  );
+    return (
+        <html lang="en">
+            <body className={inter.className}>
+                <NavBar />
+                {children}
+                <Footer />
+            </body>
+        </html>
+    );
 }
